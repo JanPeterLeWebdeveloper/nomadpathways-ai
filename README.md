@@ -6,6 +6,7 @@ Landing page application for NomadPathways AI platform.
 - **Framework:** Next.js 16.0.1
 - **React:** 19.2.0
 - **Styling:** Tailwind CSS 4
+- **Image Optimization:** Sharp 0.34.5
 - **Deployment:** Docker with standalone output mode
 - **Port:** 3000
 
@@ -111,6 +112,14 @@ Deployed on Compyle platform with the following configuration:
 6. **Footer** - Footer with links and information
 
 ## Troubleshooting
+
+### 502 Bad Gateway
+If you encounter a 502 error:
+1. **Most common cause:** Missing Sharp library
+   - Solution: `npm install sharp --save`
+   - Rebuild: `npm run build`
+2. Check that application is starting in Docker container
+3. Verify port 3000 is exposed and accessible
 
 ### 500 Error on Deployment
 If you encounter a 500 error:

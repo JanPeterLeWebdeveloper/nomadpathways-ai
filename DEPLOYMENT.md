@@ -39,6 +39,22 @@ No environment variables required for this application.
 
 ### Troubleshooting Deployment
 
+#### 502 Bad Gateway
+**Symptoms:** Preview URL shows 502 Bad Gateway (nginx error)
+
+**Cause:** Application fails to start - typically missing Sharp library for image optimization
+
+**Solution:**
+1. Ensure `sharp` is installed: `npm install sharp --save`
+2. Rebuild application: `npm run build`
+3. Redeploy to platform
+
+**Why this happens:**
+- Next.js 16 requires Sharp for image optimization in production
+- Alpine Linux (used in Dockerfile) doesn't include Sharp by default
+- Without Sharp, the Node.js server crashes on startup
+- Nginx cannot connect to crashed backend, returns 502
+
 #### 500 Error
 **Symptoms:** Preview URL shows 500 Internal Server Error
 
@@ -105,17 +121,22 @@ If deployment fails:
 
 ## Verified Build Configuration
 
-### Build Verification (Last checked: 2026-01-26)
+### Build Verification (Last checked: 2026-01-27)
 - ✅ Build completes successfully with `npm run build`
 - ✅ Standalone output directory created at `.next/standalone/`
 - ✅ server.js exists in standalone output
 - ✅ Static files generated in `.next/static/`
 - ✅ No TypeScript compilation errors
 - ✅ No build warnings (except baseline-browser-mapping outdated data)
+- ✅ **Sharp installed** for Next.js image optimization (fixes 502 error)
 
-### Known Issues
+### Known Issues & Solutions
+- **502 Bad Gateway:** ✅ FIXED - Installed Sharp library (`npm install sharp --save`)
 - **baseline-browser-mapping warning:** Non-critical warning about outdated browser data. Does not affect functionality.
 - **Next.js telemetry notice:** Informational message about anonymous usage data collection. Can be opted out if desired.
+
+### Critical Dependencies
+- **sharp (^0.34.5):** Required for Next.js 16 image optimization in production. Without this, the application will fail to start in Docker/Alpine Linux environments, causing 502 Bad Gateway errors.
 
 ### Next Steps
 1. Deploy to Compyle platform using Docker configuration
