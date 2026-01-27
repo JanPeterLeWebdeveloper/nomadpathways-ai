@@ -7,12 +7,20 @@ import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-800">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Hero />
-      <HowItWorks />
-      <Roles />
-      <Features />
-      <Pricing />
+      <section id="features">
+        <Features />
+      </section>
+      <section id="how-it-works">
+        <HowItWorks />
+      </section>
+      <section id="roles">
+        <Roles />
+      </section>
+      <section id="pricing">
+        <Pricing />
+      </section>
       <Footer />
     </div>
   );
