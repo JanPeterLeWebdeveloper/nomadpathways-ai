@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
 import Link from "next/link";
 
 interface SignupFormProps {
@@ -70,13 +69,16 @@ export default function SignupForm({ role, title, description }: SignupFormProps
       }
 
       // Auto sign in after registration
-      const signInResult = await signIn("credentials", {
-        email: formData.email,
-        password: formData.password,
-        redirect: false,
+      const loginFormData = new FormData();
+      loginFormData.append("email", formData.email);
+      loginFormData.append("password", formData.password);
+
+      const signInResponse = await fetch("/api/auth/signin", {
+        method: "POST",
+        body: loginFormData,
       });
 
-      if (signInResult?.error) {
+      if (!signInResponse.ok) {
         setError("Registration successful but login failed. Please try logging in.");
         setLoading(false);
       } else {
