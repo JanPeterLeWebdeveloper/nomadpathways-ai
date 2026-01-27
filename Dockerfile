@@ -49,6 +49,8 @@ EXPOSE 3000
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+ENV NEXTAUTH_URL=https://nomadpathways-ai.compyle.app
+ENV AUTH_SECRET=yl3/kDzhbDL9ib3jYxs8D1K3RbEwm9rgt3qXZ5nlDA4=
 
 # Start the Next.js application
 CMD ["node", "server.js"]
