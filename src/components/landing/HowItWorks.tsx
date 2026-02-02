@@ -1,19 +1,25 @@
+"use client";
+
+import { useT } from "@/i18n/useT";
+
 export default function HowItWorks() {
+  const { t } = useT();
+
   const steps = [
     {
       number: "01",
-      title: "Pick Your Pathway",
-      description: "Choose your role: NomadApprentice, Nomadpreneur, or Company. Each pathway is tailored to your goals and experience level.",
+      title: t("landing.howItWorks.step1.title"),
+      description: t("landing.howItWorks.step1.description"),
     },
     {
       number: "02",
-      title: "Learn & Track Progress",
-      description: "Follow curated learning paths, complete milestones, and track your journey to becoming location-independent.",
+      title: t("landing.howItWorks.step2.title"),
+      description: t("landing.howItWorks.step2.description"),
     },
     {
       number: "03",
-      title: "Apply to Remote Jobs or Build Income Streams",
-      description: "Connect with vetted remote opportunities or launch your own digital business with our support.",
+      title: t("landing.howItWorks.step3.title"),
+      description: t("landing.howItWorks.step3.description"),
     },
   ];
 
@@ -22,10 +28,10 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            How It Works
+            {t("landing.howItWorksTitle")}
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Three simple steps to start your digital nomad journey
+            {t("landing.howItWorksSubtitle")}
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-5xl">

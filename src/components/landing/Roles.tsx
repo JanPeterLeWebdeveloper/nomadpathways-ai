@@ -1,22 +1,43 @@
+"use client";
+
+import { useT } from "@/i18n/useT";
+
 export default function Roles() {
+  const { t } = useT();
+
   const roles = [
     {
-      name: "NomadApprentice",
-      tagline: "Start Your Journey",
-      description: "Perfect for beginners exploring remote work. Learn foundational skills and discover your path to location independence.",
-      features: ["Curated learning paths", "Skill tracking", "Community access", "Job board access"],
+      name: t("roles.nomadapprentice.name"),
+      tagline: t("roles.nomadapprentice.tagline"),
+      description: t("roles.nomadapprentice.description"),
+      features: [
+        t("roles.nomadapprentice.features.0"),
+        t("roles.nomadapprentice.features.1"),
+        t("roles.nomadapprentice.features.2"),
+        t("roles.nomadapprentice.features.3"),
+      ],
     },
     {
-      name: "Nomadpreneur",
-      tagline: "Build Your Business",
-      description: "For entrepreneurs building digital businesses. Get tools, mentorship, and resources to create sustainable income streams.",
-      features: ["Business templates", "Mentor matching", "Marketing tools", "Revenue tracking"],
+      name: t("roles.nomadpreneur.name"),
+      tagline: t("roles.nomadpreneur.tagline"),
+      description: t("roles.nomadpreneur.description"),
+      features: [
+        t("roles.nomadpreneur.features.0"),
+        t("roles.nomadpreneur.features.1"),
+        t("roles.nomadpreneur.features.2"),
+        t("roles.nomadpreneur.features.3"),
+      ],
     },
     {
-      name: "Company",
-      tagline: "Hire Global Talent",
-      description: "Connect with skilled remote professionals. Post opportunities and find motivated digital nomads for your team.",
-      features: ["Job posting", "Talent matching", "Hiring tools", "Team management"],
+      name: t("roles.company.name"),
+      tagline: t("roles.company.tagline"),
+      description: t("roles.company.description"),
+      features: [
+        t("roles.company.features.0"),
+        t("roles.company.features.1"),
+        t("roles.company.features.2"),
+        t("roles.company.features.3"),
+      ],
     },
   ];
 
@@ -25,10 +46,10 @@ export default function Roles() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Choose Your Role
+            {t("landing.rolesTitle")}
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Every journey is unique. Pick the role that matches your goals.
+            {t("landing.rolesSubtitle")}
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-3">

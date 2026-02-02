@@ -1,45 +1,51 @@
+"use client";
+
+import { useT } from "@/i18n/useT";
+
 export default function Pricing() {
+  const { t } = useT();
+
   const tiers = [
     {
-      name: "Nomad Starter",
-      price: "€29",
-      period: "/month",
-      description: "Perfect for beginners exploring remote work possibilities",
+      name: t("pricing.starter.name"),
+      price: t("pricing.starter.price"),
+      period: t("pricing.starter.period"),
+      description: t("pricing.starter.description"),
       features: [
-        "Access to learning paths",
-        "Basic progress tracking",
-        "Community forum access",
-        "Job board browsing",
-        "Resource library",
+        t("pricing.starter.features.0"),
+        t("pricing.starter.features.1"),
+        t("pricing.starter.features.2"),
+        t("pricing.starter.features.3"),
+        t("pricing.starter.features.4"),
       ],
     },
     {
-      name: "Nomad Guided",
-      price: "€99",
-      period: "/month",
-      description: "For serious learners ready to accelerate their journey",
+      name: t("pricing.guided.name"),
+      price: t("pricing.guided.price"),
+      period: t("pricing.guided.period"),
+      description: t("pricing.guided.description"),
       features: [
-        "Everything in Starter",
-        "1-on-1 mentor sessions (2/month)",
-        "Priority job applications",
-        "Advanced analytics",
-        "Live workshops",
-        "Certificate programs",
+        t("pricing.guided.features.0"),
+        t("pricing.guided.features.1"),
+        t("pricing.guided.features.2"),
+        t("pricing.guided.features.3"),
+        t("pricing.guided.features.4"),
+        t("pricing.guided.features.5"),
       ],
       featured: true,
     },
     {
-      name: "Nomad Unlimited",
-      price: "€199",
-      period: "/month",
-      description: "Premium support for entrepreneurs and companies",
+      name: t("pricing.unlimited.name"),
+      price: t("pricing.unlimited.price"),
+      period: t("pricing.unlimited.period"),
+      description: t("pricing.unlimited.description"),
       features: [
-        "Everything in Guided",
-        "Unlimited mentor access",
-        "Business tools & templates",
-        "Talent matching (companies)",
-        "White-glove support",
-        "Custom integrations",
+        t("pricing.unlimited.features.0"),
+        t("pricing.unlimited.features.1"),
+        t("pricing.unlimited.features.2"),
+        t("pricing.unlimited.features.3"),
+        t("pricing.unlimited.features.4"),
+        t("pricing.unlimited.features.5"),
       ],
     },
   ];
@@ -49,10 +55,10 @@ export default function Pricing() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Simple, Transparent Pricing
+            {t("landing.pricingTitle")}
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Choose the plan that fits your journey. All plans include 12-month minimum term.
+            {t("landing.pricingSubtitle")}
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-3">
@@ -123,7 +129,7 @@ export default function Pricing() {
                     tier.featured ? "text-blue-100" : "text-gray-500 dark:text-gray-400"
                   }`}
                 >
-                  12-month minimum term applies
+                  {t("pricing.termNotice")}
                 </p>
                 <button
                   className={`mt-4 w-full rounded-full px-8 py-3 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors ${
@@ -132,7 +138,7 @@ export default function Pricing() {
                       : "bg-blue-600 text-white hover:bg-blue-500"
                   }`}
                 >
-                  Get Started
+                  {t("common.getStarted")}
                 </button>
               </div>
             </div>

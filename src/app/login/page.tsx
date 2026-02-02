@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useT } from "@/i18n/useT";
 
 export default function LoginPage() {
   const router = useRouter();
+  const { t } = useT();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -27,14 +29,14 @@ export default function LoginPage() {
       });
 
       if (!response.ok) {
-        setError("Invalid email or password");
+        setError(t("auth.login.errors.invalidCredentials"));
         setLoading(false);
       } else {
         router.push("/dashboard");
         router.refresh();
       }
     } catch (error) {
-      setError("An error occurred. Please try again.");
+      setError(t("common.errors.generic"));
       setLoading(false);
     }
   };
@@ -43,15 +45,15 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Sign in to your account
+          {t("auth.login.title")}
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-          Or{" "}
+          {t("auth.login.subtitle")}{" "}
           <Link
             href="/signup/nomadapprentice"
             className="font-medium text-blue-600 hover:text-blue-500"
           >
-            create a new account
+            {t("auth.login.createAccount")}
           </Link>
         </p>
       </div>
@@ -70,7 +72,7 @@ export default function LoginPage() {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Email address
+                {t("auth.login.email")}
               </label>
               <div className="mt-1">
                 <input
@@ -91,7 +93,7 @@ export default function LoginPage() {
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Password
+                {t("auth.login.password")}
               </label>
               <div className="mt-1">
                 <input
@@ -113,7 +115,7 @@ export default function LoginPage() {
                 disabled={loading}
                 className="flex w-full justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loading ? "Signing in..." : "Sign in"}
+                {loading ? t("auth.login.submitting") : t("auth.login.submit")}
               </button>
             </div>
           </form>
@@ -125,7 +127,7 @@ export default function LoginPage() {
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="bg-white dark:bg-gray-800 px-2 text-gray-500 dark:text-gray-400">
-                  New to NomadPathways?
+                  {t("auth.login.newUser")}
                 </span>
               </div>
             </div>
@@ -135,19 +137,19 @@ export default function LoginPage() {
                 href="/signup/nomadapprentice"
                 className="inline-flex w-full justify-center rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 px-4 text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600"
               >
-                Sign up as NomadApprentice
+                {t("auth.login.signupAsApprentice")}
               </Link>
               <Link
                 href="/signup/nomadpreneur"
                 className="inline-flex w-full justify-center rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 px-4 text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600"
               >
-                Sign up as Nomadpreneur
+                {t("auth.login.signupAsPreneur")}
               </Link>
               <Link
                 href="/signup/company"
                 className="inline-flex w-full justify-center rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 px-4 text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600"
               >
-                Sign up as Company
+                {t("auth.login.signupAsCompany")}
               </Link>
             </div>
           </div>

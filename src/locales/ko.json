@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "홈",
+    "features": "기능",
+    "howItWorks": "작동 방식",
+    "roles": "역할",
+    "pricing": "가격",
+    "login": "로그인",
+    "signup": "가입하기",
+    "dashboard": "대시보드",
+    "logout": "로그아웃"
+  },
+  "landing": {
+    "headline": "디지털 자유로 가는 안내된 길",
+    "subheadline": "경력을 위치 독립적인 라이프스타일로 전환하세요. 수요가 많은 기술을 배우고, 진행 상황을 추적하며, 전 세계 원격 기회와 연결하세요.",
+    "primaryCTA": "무료로 시작하기",
+    "secondaryCTA": "더 알아보기",
+    "benefits": {
+      "title": "왜 NomadPathways를 선택해야 하나요?",
+      "structured": "구조화된 학습 경로",
+      "structuredDesc": "초급부터 고급까지 단계별 안내",
+      "practical": "실습 중심 과제",
+      "practicalDesc": "실제 과제와 템플릿",
+      "curated": "큐레이션 및 검증된 콘텐츠",
+      "curatedDesc": "전문가가 신중하게 선택한 모든 자료",
+      "roleSystem": "역할 기반 시스템",
+      "roleSystemDesc": "학습, 교육 또는 채용 - 각 역할에는 고유한 기능이 있습니다"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "계정에 로그인",
+      "subtitle": "또는",
+      "subtitleLink": "새 계정 만들기",
+      "email": "이메일 주소",
+      "password": "비밀번호",
+      "submit": "로그인",
+      "submitting": "로그인 중...",
+      "error": "잘못된 이메일 또는 비밀번호",
+      "errorGeneric": "오류가 발생했습니다. 다시 시도해 주세요."
+    },
+    "signup": {
+      "title": "{role}(으)로 가입",
+      "nomadapprentice": {
+        "title": "NomadApprentice로 가입",
+        "description": "디지털 자유를 향한 여정을 시작하세요. 수요가 많은 기술을 배우고 위치 독립적인 경력을 구축하세요."
+      },
+      "nomadpreneur": {
+        "title": "Nomadpreneur로 가입",
+        "description": "전문 지식을 공유하고 수입을 얻으세요. 디지털 노마드 삶을 향한 다른 사람들을 가르치세요."
+      },
+      "company": {
+        "title": "기업으로 가입",
+        "description": "재능 있는 원격 근로자를 찾고 고용하세요. 위치 독립적인 전문가와 연결하세요."
+      },
+      "name": "전체 이름",
+      "email": "이메일 주소",
+      "password": "비밀번호",
+      "confirmPassword": "비밀번호 확인",
+      "passwordHint": "최소 6자 이상이어야 합니다",
+      "submit": "계정 만들기",
+      "submitting": "계정 만드는 중...",
+      "hasAccount": "이미 계정이 있으신가요?",
+      "signIn": "로그인",
+      "errorPasswordMatch": "비밀번호가 일치하지 않습니다",
+      "errorPasswordLength": "비밀번호는 최소 6자 이상이어야 합니다",
+      "errorUserExists": "사용자가 이미 존재합니다",
+      "errorGeneric": "오류가 발생했습니다. 다시 시도해 주세요.",
+      "successButLoginFailed": "등록은 성공했지만 로그인에 실패했습니다. 로그인을 시도해 주세요."
+    },
+    "signupAs": "다음으로 가입:"
+  },
+  "roles": {
+    "nomadapprentice": {
+      "name": "NomadApprentice",
+      "tagline": "학습 및 성장",
+      "description": "디지털 노마드 여정을 시작하거나 위치 독립적인 작업을 위한 새로운 기술을 습득하려고 합니다."
+    },
+    "nomadpreneur": {
+      "name": "Nomadpreneur",
+      "tagline": "가르치고 수익 창출",
+      "description": "공유할 전문 지식이 있으며 자신만의 위치 독립적인 수입을 구축하면서 다른 사람을 돕고 싶습니다."
+    },
+    "company": {
+      "name": "기업",
+      "tagline": "인재 고용",
+      "description": "숙련된 위치 독립적인 전문가와 연결하려는 비즈니스입니다."
+    },
+    "admin": {
+      "name": "관리자",
+      "tagline": "플랫폼 관리"
+    }
+  },
+  "dashboard": {
+    "welcome": "다시 오신 것을 환영합니다, {name}님!",
+    "subtitle": "디지털 자유를 향한 여정을 계속하세요",
+    "stats": {
+      "progress": "전체 진행률",
+      "pathways": "시작한 경로",
+      "tasks": "완료한 작업",
+      "achievements": "성취"
+    },
+    "pathways": {
+      "title": "내 학습 경로",
+      "incomeStreams": "수입원",
+      "incomeStreamsDesc": "여러 수익원 구축",
+      "remoteJobs": "원격 근무",
+      "remoteJobsDesc": "꿈의 원격 직책 확보",
+      "businessBuilder": "비즈니스 빌더",
+      "businessBuilderDesc": "비즈니스 시작 및 확장"
+    },
+    "nextSteps": {
+      "title": "다음 단계"
+    }
+  },
+  "common": {
+    "save": "저장",
+    "cancel": "취소",
+    "back": "뒤로",
+    "next": "다음",
+    "loading": "로딩 중...",
+    "errorGeneric": "오류가 발생했습니다",
+    "or": "또는",
+    "viewAll": "모두 보기",
+    "learnMore": "더 알아보기",
+    "getStarted": "시작하기",
+    "continue": "계속",
+    "close": "닫기"
+  },
+  "a11y": {
+    "languageSwitcher": "언어 변경",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기"
+  }
+}

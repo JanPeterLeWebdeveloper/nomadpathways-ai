@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "howItWorks": "Cómo funciona",
+    "roles": "Roles",
+    "pricing": "Precios",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "dashboard": "Panel",
+    "logout": "Cerrar sesión"
+  },
+  "landing": {
+    "headline": "Tu camino guiado hacia la libertad digital",
+    "subheadline": "Transforma tu carrera en un estilo de vida independiente de ubicación. Aprende habilidades demandadas, rastrea tu progreso y conéctate con oportunidades remotas en todo el mundo.",
+    "primaryCTA": "Comenzar gratis",
+    "secondaryCTA": "Saber más",
+    "benefits": {
+      "title": "¿Por qué elegir NomadPathways?",
+      "structured": "Rutas de aprendizaje estructuradas",
+      "structuredDesc": "Guías paso a paso desde principiante hasta avanzado",
+      "practical": "Tareas orientadas a la práctica",
+      "practicalDesc": "Asignaciones del mundo real y plantillas",
+      "curated": "Contenido curado y verificado",
+      "curatedDesc": "Todos los materiales cuidadosamente seleccionados por expertos",
+      "roleSystem": "Sistema basado en roles",
+      "roleSystemDesc": "Aprende, enseña o contrata - cada rol tiene características únicas"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Inicia sesión en tu cuenta",
+      "subtitle": "O",
+      "subtitleLink": "crea una cuenta nueva",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar sesión",
+      "submitting": "Iniciando sesión...",
+      "error": "Correo electrónico o contraseña inválidos",
+      "errorGeneric": "Ocurrió un error. Por favor, intenta de nuevo."
+    },
+    "signup": {
+      "title": "Regístrate como {role}",
+      "nomadapprentice": {
+        "title": "Regístrate como NomadApprentice",
+        "description": "Comienza tu viaje hacia la libertad digital. Aprende habilidades demandadas y construye tu carrera independiente de ubicación."
+      },
+      "nomadpreneur": {
+        "title": "Regístrate como Nomadpreneur",
+        "description": "Comparte tu experiencia y gana ingresos. Enseña a otros en su camino hacia la vida nómada digital."
+      },
+      "company": {
+        "title": "Regístrate como Empresa",
+        "description": "Encuentra y contrata trabajadores remotos talentosos. Conéctate con profesionales independientes de ubicación."
+      },
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "passwordHint": "Debe tener al menos 6 caracteres",
+      "submit": "Crear cuenta",
+      "submitting": "Creando cuenta...",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión",
+      "errorPasswordMatch": "Las contraseñas no coinciden",
+      "errorPasswordLength": "La contraseña debe tener al menos 6 caracteres",
+      "errorUserExists": "El usuario ya existe",
+      "errorGeneric": "Ocurrió un error. Por favor, intenta de nuevo.",
+      "successButLoginFailed": "Registro exitoso pero falló el inicio de sesión. Por favor, intenta iniciar sesión."
+    },
+    "signupAs": "Registrarse como:"
+  },
+  "roles": {
+    "nomadapprentice": {
+      "name": "NomadApprentice",
+      "tagline": "Aprender y crecer",
+      "description": "Estás comenzando tu viaje nómada digital o buscas adquirir nuevas habilidades para trabajo independiente de ubicación."
+    },
+    "nomadpreneur": {
+      "name": "Nomadpreneur",
+      "tagline": "Enseñar y ganar",
+      "description": "Tienes experiencia para compartir y quieres ayudar a otros mientras construyes tu propio ingreso independiente de ubicación."
+    },
+    "company": {
+      "name": "Empresa",
+      "tagline": "Contratar talento",
+      "description": "Eres una empresa que busca conectarse con profesionales calificados e independientes de ubicación."
+    },
+    "admin": {
+      "name": "Administrador",
+      "tagline": "Gestionar plataforma"
+    }
+  },
+  "dashboard": {
+    "welcome": "¡Bienvenido de nuevo, {name}!",
+    "subtitle": "Continúa tu viaje hacia la libertad digital",
+    "stats": {
+      "progress": "Progreso general",
+      "pathways": "Rutas iniciadas",
+      "tasks": "Tareas completadas",
+      "achievements": "Logros"
+    },
+    "pathways": {
+      "title": "Tus rutas",
+      "incomeStreams": "Fuentes de ingresos",
+      "incomeStreamsDesc": "Construye múltiples fuentes de ingresos",
+      "remoteJobs": "Trabajos remotos",
+      "remoteJobsDesc": "Consigue tu trabajo remoto ideal",
+      "businessBuilder": "Constructor de negocios",
+      "businessBuilderDesc": "Inicia y escala tu negocio"
+    },
+    "nextSteps": {
+      "title": "Próximos pasos"
+    }
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "loading": "Cargando...",
+    "errorGeneric": "Ocurrió un error",
+    "or": "o",
+    "viewAll": "Ver todo",
+    "learnMore": "Saber más",
+    "getStarted": "Comenzar",
+    "continue": "Continuar",
+    "close": "Cerrar"
+  },
+  "a11y": {
+    "languageSwitcher": "Cambiar idioma",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  }
+}

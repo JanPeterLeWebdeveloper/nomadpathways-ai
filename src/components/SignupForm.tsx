@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useT } from "@/i18n/useT";
 
 interface SignupFormProps {
   role: "nomadapprentice" | "nomadpreneur" | "company";
@@ -12,6 +13,7 @@ interface SignupFormProps {
 
 export default function SignupForm({ role, title, description }: SignupFormProps) {
   const router = useRouter();
+  const { t } = useT();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,12 +36,12 @@ export default function SignupForm({ role, title, description }: SignupFormProps
 
     // Validation
     if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match");
+      setError(t("auth.signup.errors.passwordMismatch"));
       return;
     }
 
     if (formData.password.length < 6) {
-      setError("Password must be at least 6 characters");
+      setError(t("auth.signup.errors.passwordTooShort"));
       return;
     }
 
@@ -63,7 +65,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.error || "Registration failed");
+        setError(data.error || t("auth.signup.errors.registrationFailed"));
         setLoading(false);
         return;
       }
@@ -79,7 +81,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
       });
 
       if (!signInResponse.ok) {
-        setError("Registration successful but login failed. Please try logging in.");
+        setError(t("auth.signup.errors.autoLoginFailed"));
         setLoading(false);
       } else {
         // Redirect based on role
@@ -93,7 +95,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
         router.refresh();
       }
     } catch (error) {
-      setError("An error occurred. Please try again.");
+      setError(t("common.errors.generic"));
       setLoading(false);
     }
   };
@@ -108,12 +110,12 @@ export default function SignupForm({ role, title, description }: SignupFormProps
           {description}
         </p>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-          Already have an account?{" "}
+          {t("auth.signup.alreadyHaveAccount")}{" "}
           <Link
             href="/login"
             className="font-medium text-blue-600 hover:text-blue-500"
           >
-            Sign in
+            {t("auth.signup.signIn")}
           </Link>
         </p>
       </div>
@@ -132,7 +134,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Full name
+                {t("auth.signup.name")}
               </label>
               <div className="mt-1">
                 <input
@@ -153,7 +155,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Email address
+                {t("auth.signup.email")}
               </label>
               <div className="mt-1">
                 <input
@@ -174,7 +176,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Password
+                {t("auth.signup.password")}
               </label>
               <div className="mt-1">
                 <input
@@ -189,7 +191,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
                 />
               </div>
               <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                Must be at least 6 characters
+                {t("auth.signup.passwordHint")}
               </p>
             </div>
 
@@ -198,7 +200,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
                 htmlFor="confirmPassword"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                Confirm password
+                {t("auth.signup.confirmPassword")}
               </label>
               <div className="mt-1">
                 <input
@@ -220,7 +222,7 @@ export default function SignupForm({ role, title, description }: SignupFormProps
                 disabled={loading}
                 className="flex w-full justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loading ? "Creating account..." : "Create account"}
+                {loading ? t("auth.signup.submitting") : t("auth.signup.submit")}
               </button>
             </div>
           </form>

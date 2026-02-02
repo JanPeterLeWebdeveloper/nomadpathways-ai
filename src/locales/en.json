@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "roles": "Roles",
+    "pricing": "Pricing",
+    "login": "Log in",
+    "signup": "Sign up",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "landing": {
+    "headline": "Your Guided Path to Digital Freedom",
+    "subheadline": "Transform your career into a location-independent lifestyle. Learn in-demand skills, track your progress, and connect with remote opportunities worldwide.",
+    "primaryCTA": "Get Started Free",
+    "secondaryCTA": "Learn More",
+    "benefits": {
+      "title": "Why Choose NomadPathways?",
+      "structured": "Structured Learning Pathways",
+      "structuredDesc": "Step-by-step guided journeys from beginner to advanced",
+      "practical": "Practice-Oriented Tasks",
+      "practicalDesc": "Real-world assignments and templates",
+      "curated": "Curated & Verified Content",
+      "curatedDesc": "All materials carefully selected by experts",
+      "roleSystem": "Role-Based System",
+      "roleSystemDesc": "Learn, teach, or hire - each role has unique features"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in to your account",
+      "subtitle": "Or",
+      "subtitleLink": "create a new account",
+      "email": "Email address",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "error": "Invalid email or password",
+      "errorGeneric": "An error occurred. Please try again."
+    },
+    "signup": {
+      "title": "Sign up as {role}",
+      "nomadapprentice": {
+        "title": "Sign up as NomadApprentice",
+        "description": "Start your journey to digital freedom. Learn in-demand skills and build your location-independent career."
+      },
+      "nomadpreneur": {
+        "title": "Sign up as Nomadpreneur",
+        "description": "Share your expertise and earn income. Teach others on their path to digital nomad life."
+      },
+      "company": {
+        "title": "Sign up as Company",
+        "description": "Find and hire talented remote workers. Connect with location-independent professionals."
+      },
+      "name": "Full name",
+      "email": "Email address",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "passwordHint": "Must be at least 6 characters",
+      "submit": "Create account",
+      "submitting": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "errorPasswordMatch": "Passwords do not match",
+      "errorPasswordLength": "Password must be at least 6 characters",
+      "errorUserExists": "User already exists",
+      "errorGeneric": "An error occurred. Please try again.",
+      "successButLoginFailed": "Registration successful but login failed. Please try logging in."
+    },
+    "signupAs": "Sign up as:"
+  },
+  "roles": {
+    "nomadapprentice": {
+      "name": "NomadApprentice",
+      "tagline": "Learn & Grow",
+      "description": "You're starting your digital nomad journey or looking to acquire new skills for location-independent work."
+    },
+    "nomadpreneur": {
+      "name": "Nomadpreneur",
+      "tagline": "Teach & Earn",
+      "description": "You have expertise to share and want to help others while building your own location-independent income."
+    },
+    "company": {
+      "name": "Company",
+      "tagline": "Hire Talent",
+      "description": "You're a business looking to connect with skilled, location-independent professionals."
+    },
+    "admin": {
+      "name": "Admin",
+      "tagline": "Manage Platform"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {name}!",
+    "subtitle": "Continue your journey to digital freedom",
+    "stats": {
+      "progress": "Overall Progress",
+      "pathways": "Pathways Started",
+      "tasks": "Tasks Completed",
+      "achievements": "Achievements"
+    },
+    "pathways": {
+      "title": "Your Pathways",
+      "incomeStreams": "Income Streams",
+      "incomeStreamsDesc": "Build multiple revenue sources",
+      "remoteJobs": "Remote Jobs",
+      "remoteJobsDesc": "Land your dream remote position",
+      "businessBuilder": "Business Builder",
+      "businessBuilderDesc": "Start and scale your business"
+    },
+    "nextSteps": {
+      "title": "Next Steps"
+    }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "loading": "Loading...",
+    "errorGeneric": "An error occurred",
+    "or": "or",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "getStarted": "Get started",
+    "continue": "Continue",
+    "close": "Close"
+  },
+  "a11y": {
+    "languageSwitcher": "Change language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
+}

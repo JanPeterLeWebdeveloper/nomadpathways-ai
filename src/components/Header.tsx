@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useT } from "@/i18n/useT";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface HeaderProps {
   session?: {
@@ -18,18 +20,19 @@ export default function Header({ session }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [signupDropdownOpen, setSignupDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const { t } = useT();
 
   const navigation = [
-    { name: "Features", href: "/features" },
-    { name: "How it works", href: "/how-it-works" },
-    { name: "Roles", href: "/roles" },
-    { name: "Pricing", href: "/pricing" },
+    { name: t("nav.features"), href: "/features" },
+    { name: t("nav.howItWorks"), href: "/how-it-works" },
+    { name: t("nav.roles"), href: "/roles" },
+    { name: t("nav.pricing"), href: "/pricing" },
   ];
 
   const signupLinks = [
-    { name: "NomadApprentice", href: "/signup/nomadapprentice", description: "Learn & Grow" },
-    { name: "Nomadpreneur", href: "/signup/nomadpreneur", description: "Teach & Earn" },
-    { name: "Company", href: "/signup/company", description: "Hire Talent" },
+    { name: t("roles.nomadapprentice.name"), href: "/signup/nomadapprentice", description: t("roles.nomadapprentice.tagline") },
+    { name: t("roles.nomadpreneur.name"), href: "/signup/nomadpreneur", description: t("roles.nomadpreneur.tagline") },
+    { name: t("roles.company.name"), href: "/signup/company", description: t("roles.company.tagline") },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -64,6 +67,7 @@ export default function Header({ session }: HeaderProps) {
 
           {/* Auth Buttons / User Menu */}
           <div className="flex items-center space-x-4">
+            <LanguageSwitcher />
             {session ? (
               <div className="hidden md:flex items-center space-x-4">
                 <Link
@@ -78,7 +82,7 @@ export default function Header({ session }: HeaderProps) {
                   }
                   className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Dashboard
+                  {t("nav.dashboard")}
                 </Link>
                 <span className="text-xs px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 font-medium">
                   {session.user.role}
@@ -88,7 +92,7 @@ export default function Header({ session }: HeaderProps) {
                     type="submit"
                     className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400"
                   >
-                    Logout
+                    {t("nav.logout")}
                   </button>
                 </form>
               </div>
@@ -98,14 +102,14 @@ export default function Header({ session }: HeaderProps) {
                   href="/login"
                   className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Log in
+                  {t("nav.login")}
                 </Link>
                 <div className="relative">
                   <button
                     onClick={() => setSignupDropdownOpen(!signupDropdownOpen)}
                     className="inline-flex items-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
                   >
-                    Sign up
+                    {t("nav.signup")}
                     <svg
                       className="ml-2 h-4 w-4"
                       fill="none"
@@ -198,14 +202,14 @@ export default function Header({ session }: HeaderProps) {
                     className="block px-4 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Dashboard
+                    {t("nav.dashboard")}
                   </Link>
                   <form action="/api/auth/signout" method="POST" className="px-4 py-2">
                     <button
                       type="submit"
                       className="w-full text-left text-base font-medium text-red-600 dark:text-red-400"
                     >
-                      Logout
+                      {t("nav.logout")}
                     </button>
                   </form>
                 </>
@@ -216,10 +220,10 @@ export default function Header({ session }: HeaderProps) {
                     className="block px-4 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Log in
+                    {t("nav.login")}
                   </Link>
                   <div className="px-4 py-2 space-y-2">
-                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">Sign up as:</p>
+                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">{t("auth.signupAs")}</p>
                     {signupLinks.map((link) => (
                       <Link
                         key={link.href}

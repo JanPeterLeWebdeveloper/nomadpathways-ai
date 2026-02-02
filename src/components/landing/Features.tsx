@@ -1,36 +1,42 @@
+"use client";
+
+import { useT } from "@/i18n/useT";
+
 export default function Features() {
+  const { t } = useT();
+
   const features = [
     {
-      name: "Curated Learning Paths",
-      description: "Follow structured roadmaps tailored to your chosen career path and skill level.",
+      name: t("landing.features.curatedPaths.title"),
+      description: t("landing.features.curatedPaths.description"),
     },
     {
-      name: "Progress Tracking",
-      description: "Monitor your skills development and celebrate milestones along your journey.",
+      name: t("landing.features.progressTracking.title"),
+      description: t("landing.features.progressTracking.description"),
     },
     {
-      name: "Remote Job Board",
-      description: "Access vetted remote opportunities from companies hiring digital nomads.",
+      name: t("landing.features.jobBoard.title"),
+      description: t("landing.features.jobBoard.description"),
     },
     {
-      name: "Community Network",
-      description: "Connect with fellow nomads, share experiences, and learn from each other.",
+      name: t("landing.features.community.title"),
+      description: t("landing.features.community.description"),
     },
     {
-      name: "Expert Mentorship",
-      description: "Get guidance from experienced digital nomads and industry professionals.",
+      name: t("landing.features.mentorship.title"),
+      description: t("landing.features.mentorship.description"),
     },
     {
-      name: "Resource Library",
-      description: "Access templates, guides, and tools to accelerate your nomad journey.",
+      name: t("landing.features.resources.title"),
+      description: t("landing.features.resources.description"),
     },
     {
-      name: "Income Stream Builder",
-      description: "Tools and frameworks to help entrepreneurs build sustainable businesses.",
+      name: t("landing.features.incomeBuilder.title"),
+      description: t("landing.features.incomeBuilder.description"),
     },
     {
-      name: "Global Talent Matching",
-      description: "Smart matching system connecting companies with qualified remote professionals.",
+      name: t("landing.features.talentMatching.title"),
+      description: t("landing.features.talentMatching.description"),
     },
   ];
 
@@ -39,10 +45,10 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Everything You Need to Succeed
+            {t("landing.featuresTitle")}
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Comprehensive tools and resources for your digital nomad journey
+            {t("landing.featuresSubtitle")}
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-7xl">
