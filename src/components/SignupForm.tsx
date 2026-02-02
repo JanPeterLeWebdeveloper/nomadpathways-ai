@@ -87,9 +87,9 @@ export default function SignupForm({ role, title, description }: SignupFormProps
         // Redirect based on role
         const dashboardPath =
           role === "nomadapprentice"
-            ? "/dashboard"
+            ? "/dashboard/apprentice"
             : role === "nomadpreneur"
-            ? "/dashboard/nomadpreneur"
+            ? "/dashboard/preneur"
             : "/dashboard/company";
         router.push(dashboardPath);
         router.refresh();

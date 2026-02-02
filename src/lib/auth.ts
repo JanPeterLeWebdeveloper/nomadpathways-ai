@@ -119,9 +119,9 @@ export async function registerUser(data: {
 export function getDashboardPath(role: string): string {
   switch (role) {
     case "nomadapprentice":
-      return "/dashboard";
+      return "/dashboard/apprentice";
     case "nomadpreneur":
-      return "/dashboard/nomadpreneur";
+      return "/dashboard/preneur";
     case "company":
       return "/dashboard/company";
     case "admin":
