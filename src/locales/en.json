@@ -12,7 +12,7 @@
   },
   "landing": {
     "headline": "Your Guided Path to Digital Freedom",
-    "subheadline": "Transform your career into a location-independent lifestyle. Learn in-demand skills, track your progress, and connect with remote opportunities worldwide.",
+    "subheadline": "Learn proven strategies to build income streams, launch businesses, and achieve location independence. Follow step-by-step pathways designed by successful digital nomads.",
     "primaryCTA": "Get Started Free",
     "secondaryCTA": "Learn More",
     "benefits": {
@@ -73,18 +73,36 @@
   "roles": {
     "nomadapprentice": {
       "name": "NomadApprentice",
-      "tagline": "Learn & Grow",
-      "description": "You're starting your digital nomad journey or looking to acquire new skills for location-independent work."
+      "tagline": "Start Your Journey",
+      "description": "Perfect for beginners exploring remote work. Learn foundational skills and discover your path to location independence.",
+      "features": {
+        "0": "Curated learning paths",
+        "1": "Skill tracking",
+        "2": "Community access",
+        "3": "Job board access"
+      }
     },
     "nomadpreneur": {
       "name": "Nomadpreneur",
-      "tagline": "Teach & Earn",
-      "description": "You have expertise to share and want to help others while building your own location-independent income."
+      "tagline": "Build Your Business",
+      "description": "For entrepreneurs building digital businesses. Get tools, mentorship, and resources to create sustainable income streams.",
+      "features": {
+        "0": "Business templates",
+        "1": "Mentor matching",
+        "2": "Marketing tools",
+        "3": "Revenue tracking"
+      }
     },
     "company": {
       "name": "Company",
-      "tagline": "Hire Talent",
-      "description": "You're a business looking to connect with skilled, location-independent professionals."
+      "tagline": "Hire Global Talent",
+      "description": "Connect with skilled remote professionals. Post opportunities and find motivated digital nomads for your team.",
+      "features": {
+        "0": "Job posting",
+        "1": "Talent matching",
+        "2": "Hiring tools",
+        "3": "Team management"
+      }
     },
     "admin": {
       "name": "Admin",

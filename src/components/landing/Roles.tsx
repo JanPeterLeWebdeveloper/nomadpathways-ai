@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useT } from "@/i18n/useT";
 
 export default function Roles() {
@@ -16,6 +17,7 @@ export default function Roles() {
         t("roles.nomadapprentice.features.2"),
         t("roles.nomadapprentice.features.3"),
       ],
+      href: "/signup/nomadapprentice",
     },
     {
       name: t("roles.nomadpreneur.name"),
@@ -27,6 +29,7 @@ export default function Roles() {
         t("roles.nomadpreneur.features.2"),
         t("roles.nomadpreneur.features.3"),
       ],
+      href: "/signup/nomadpreneur",
     },
     {
       name: t("roles.company.name"),
@@ -38,6 +41,7 @@ export default function Roles() {
         t("roles.company.features.2"),
         t("roles.company.features.3"),
       ],
+      href: "/signup/company",
     },
   ];
 
@@ -56,39 +60,49 @@ export default function Roles() {
           {roles.map((role) => (
             <div
               key={role.name}
-              className="flex flex-col rounded-3xl bg-white dark:bg-gray-800 p-8 shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-xl transition-shadow"
+              className="flex flex-col justify-between rounded-3xl bg-white dark:bg-gray-800 p-8 shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                {role.name}
-              </h3>
-              <p className="mt-2 text-sm font-semibold text-blue-600 dark:text-blue-400">
-                {role.tagline}
-              </p>
-              <p className="mt-4 text-base text-gray-600 dark:text-gray-300">
-                {role.description}
-              </p>
-              <ul className="mt-8 space-y-3">
-                {role.features.map((feature) => (
-                  <li key={feature} className="flex items-start">
-                    <svg
-                      className="h-6 w-6 flex-shrink-0 text-blue-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <span className="ml-3 text-sm text-gray-600 dark:text-gray-300">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {role.name}
+                </h3>
+                <p className="mt-2 text-sm font-semibold text-blue-600 dark:text-blue-400">
+                  {role.tagline}
+                </p>
+                <p className="mt-4 text-base text-gray-600 dark:text-gray-300">
+                  {role.description}
+                </p>
+                <ul className="mt-8 space-y-3">
+                  {role.features.map((feature) => (
+                    <li key={feature} className="flex items-start">
+                      <svg
+                        className="h-6 w-6 flex-shrink-0 text-blue-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <span className="ml-3 text-sm text-gray-600 dark:text-gray-300">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href={role.href}
+                  className="block w-full text-center rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+                >
+                  {t("common.getStarted")}
+                </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -12,7 +12,7 @@
   },
   "landing": {
     "headline": "Dein geführter Weg zur digitalen Freiheit",
-    "subheadline": "Verwandle deine Karriere in einen ortsunabhängigen Lebensstil. Lerne gefragte Fähigkeiten, verfolge deinen Fortschritt und finde weltweite Remote-Möglichkeiten.",
+    "subheadline": "Lerne bewährte Strategien zum Aufbau von Einkommensströmen, Gründung von Unternehmen und Erreichen von Ortsunabhängigkeit. Folge Schritt-für-Schritt-Pfaden, die von erfolgreichen digitalen Nomaden entwickelt wurden.",
     "primaryCTA": "Kostenlos starten",
     "secondaryCTA": "Mehr erfahren",
     "benefits": {
@@ -73,18 +73,36 @@
   "roles": {
     "nomadapprentice": {
       "name": "NomadApprentice",
-      "tagline": "Lernen & Wachsen",
-      "description": "Du beginnst deine digitale Nomadenreise oder möchtest neue Fähigkeiten für ortsunabhängige Arbeit erwerben."
+      "tagline": "Starte deine Reise",
+      "description": "Perfekt für Anfänger, die Remote-Arbeit erkunden. Lerne grundlegende Fähigkeiten und entdecke deinen Weg zur Ortsunabhängigkeit.",
+      "features": {
+        "0": "Kuratierte Lernpfade",
+        "1": "Fähigkeiten-Tracking",
+        "2": "Community-Zugang",
+        "3": "Zugang zur Jobbörse"
+      }
     },
     "nomadpreneur": {
       "name": "Nomadpreneur",
-      "tagline": "Lehren & Verdienen",
-      "description": "Du hast Expertise zu teilen und möchtest anderen helfen, während du dein eigenes ortsunabhängiges Einkommen aufbaust."
+      "tagline": "Baue dein Geschäft auf",
+      "description": "Für Unternehmer, die digitale Businesses aufbauen. Erhalte Tools, Mentoring und Ressourcen für nachhaltige Einkommensströme.",
+      "features": {
+        "0": "Business-Vorlagen",
+        "1": "Mentor-Matching",
+        "2": "Marketing-Tools",
+        "3": "Umsatz-Tracking"
+      }
     },
     "company": {
       "name": "Unternehmen",
-      "tagline": "Talente einstellen",
-      "description": "Du bist ein Unternehmen, das sich mit qualifizierten, ortsunabhängigen Fachkräften verbinden möchte."
+      "tagline": "Globales Talent einstellen",
+      "description": "Verbinde dich mit qualifizierten Remote-Fachkräften. Poste Angebote und finde motivierte digitale Nomaden für dein Team.",
+      "features": {
+        "0": "Stellenausschreibung",
+        "1": "Talent-Matching",
+        "2": "Einstellungs-Tools",
+        "3": "Team-Management"
+      }
     },
     "admin": {
       "name": "Administrator",

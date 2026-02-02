@@ -12,7 +12,7 @@
   },
   "landing": {
     "headline": "Tu camino guiado hacia la libertad digital",
-    "subheadline": "Transforma tu carrera en un estilo de vida independiente de ubicación. Aprende habilidades demandadas, rastrea tu progreso y conéctate con oportunidades remotas en todo el mundo.",
+    "subheadline": "Aprende estrategias probadas para construir fuentes de ingresos, lanzar negocios y lograr independencia de ubicación. Sigue rutas paso a paso diseñadas por nómadas digitales exitosos.",
     "primaryCTA": "Comenzar gratis",
     "secondaryCTA": "Saber más",
     "benefits": {
@@ -73,18 +73,36 @@
   "roles": {
     "nomadapprentice": {
       "name": "NomadApprentice",
-      "tagline": "Aprender y crecer",
-      "description": "Estás comenzando tu viaje nómada digital o buscas adquirir nuevas habilidades para trabajo independiente de ubicación."
+      "tagline": "Comienza tu viaje",
+      "description": "Perfecto para principiantes explorando trabajo remoto. Aprende habilidades fundamentales y descubre tu camino a la independencia de ubicación.",
+      "features": {
+        "0": "Rutas de aprendizaje curadas",
+        "1": "Seguimiento de habilidades",
+        "2": "Acceso a la comunidad",
+        "3": "Acceso a bolsa de trabajo"
+      }
     },
     "nomadpreneur": {
       "name": "Nomadpreneur",
-      "tagline": "Enseñar y ganar",
-      "description": "Tienes experiencia para compartir y quieres ayudar a otros mientras construyes tu propio ingreso independiente de ubicación."
+      "tagline": "Construye tu negocio",
+      "description": "Para emprendedores construyendo negocios digitales. Obtén herramientas, mentoría y recursos para crear flujos de ingresos sostenibles.",
+      "features": {
+        "0": "Plantillas de negocios",
+        "1": "Emparejamiento de mentores",
+        "2": "Herramientas de marketing",
+        "3": "Seguimiento de ingresos"
+      }
     },
     "company": {
       "name": "Empresa",
-      "tagline": "Contratar talento",
-      "description": "Eres una empresa que busca conectarse con profesionales calificados e independientes de ubicación."
+      "tagline": "Contrata talento global",
+      "description": "Conéctate con profesionales remotos calificados. Publica oportunidades y encuentra nómadas digitales motivados para tu equipo.",
+      "features": {
+        "0": "Publicación de empleos",
+        "1": "Emparejamiento de talento",
+        "2": "Herramientas de contratación",
+        "3": "Gestión de equipo"
+      }
     },
     "admin": {
       "name": "Administrador",

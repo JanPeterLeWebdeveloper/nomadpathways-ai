@@ -17,13 +17,13 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="#pricing"
+              href="/signup/nomadapprentice"
               className="rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
             >
               {t("landing.primaryCTA")}
             </a>
             <a
-              href="#how-it-works"
+              href="/how-it-works"
               className="rounded-full border border-gray-300 dark:border-gray-600 px-8 py-3 text-sm font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
             >
               {t("landing.secondaryCTA")}
